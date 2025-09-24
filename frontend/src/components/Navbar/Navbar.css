@@ -1,0 +1,144 @@
+/* General */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.navbar {
+  width: 100%;
+  background: #F9F7F4;
+  border-bottom: 1px solid #e5e5e5;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  font-family: Arial, sans-serif;
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+/* Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #0b58d0;
+  cursor: pointer;
+}
+.logo span {
+  color: #333;
+}
+
+/* Desktop Nav */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #0b58d0;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  background: white;
+  border: 1px solid #ddd;
+  padding: 10px 0;
+  list-style: none;
+  display: none;
+}
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 20px;
+  color: #333;
+}
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+/* Buttons */
+.nav-buttons {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.nav-buttons .support {
+  background: #eee;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.nav-buttons .phone {
+  color: #333;
+  text-decoration: none;
+  font-weight: 500;
+}
+.nav-buttons .contact {
+  background: #0b58d0;
+  color: white;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 26px;
+  cursor: pointer;
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  border-top: 1px solid #eee;
+}
+.mobile-menu a, .mobile-menu summary {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+.mobile-menu details summary {
+  cursor: pointer;
+}
+.mobile-menu.open {
+  display: flex;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .nav-links, .nav-buttons {
+    display: none;
+  }
+  .hamburger {
+    display: block;
+  }
+}
