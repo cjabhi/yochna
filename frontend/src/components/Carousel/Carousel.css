@@ -34,6 +34,7 @@
 .carousel-overlay h1 {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 300;
 }
 
 .carousel-overlay p {
@@ -105,7 +106,7 @@
 
 
 
-.contact-btn {
+.contacta-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,7 +122,7 @@
   gap: 15px;
 }
 
-.contact-btn .arrow {
+.contacta-btn .arrowa {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -134,12 +135,12 @@
 }
 
 /* Hover effect */
-.contact-btn:hover {
+.contacta-btn:hover {
   background: #ff4f7a;   /* pink background */
   color: #1a1a6b;        /* dark blue text */
 }
 
-.contact-btn:hover .arrow {
+.contacta-btn:hover .arrowa {
   background: white;     /* white circle */
   color: #ff4f7a;        /* pink arrow */
 }

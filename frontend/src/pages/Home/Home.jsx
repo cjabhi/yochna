@@ -6,7 +6,9 @@ import FeaturesSection from '../../components/FeatureSection/FeaturesSection';
 import Services from '../../components/Services/Services';
 import IndustrySlider from '../../components/IndustrySlider/IndustrySlider';
 import Reviews from '../../components/Reviews/Reviews';
-
+import OfficeLocations from '../../components/OfficeLocations/OfficeLocations';
+import ContactSection from '../../components/ContactSection/ContactSection';
+import Footer from '../../components/FooterSection/FooterSection';
 
 const Home = () => {
   return (
@@ -55,6 +57,12 @@ const Home = () => {
         <IndustrySlider />
 
         <Reviews />
+
+        <OfficeLocations />
+
+        <ContactSection />
+
+        <Footer />
 
     </div>
 

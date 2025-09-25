@@ -14,6 +14,7 @@
   left: 0;
   z-index: 999;
   font-family: Arial, sans-serif;
+   transition: top 0.3s ease-in-out;
 }
 
 .navbar-container {
@@ -132,6 +133,10 @@
 .mobile-menu.open {
   display: flex;
 }
+
+
+
+
 
 /* Responsive */
 @media (max-width: 992px) {

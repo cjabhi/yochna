@@ -60,8 +60,8 @@ const Carousel = () => {
             <h1>{slide.title}</h1>
             <p>{slide.subtitle}</p>
             <Link to="/contact">   
-            <button className="contact-btn">
-            Contact Us <span className="arrow">→</span>
+            <button className="contacta-btn">
+            Contact Us <span className="arrowa">→</span>
             </button>
              </Link>
 

@@ -1,13 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
+  const [visible, setVisible] = useState(true);
+
   const toggleMenu = () => setIsOpen(!isOpen);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollPos = window.pageYOffset;
+
+      if (currentScrollPos > prevScrollPos && currentScrollPos > 100) {
+        setVisible(false); // scrolling down → hide navbar
+      } else {
+        setVisible(true);  // scrolling up → show navbar
+      }
+
+      setPrevScrollPos(currentScrollPos);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [prevScrollPos]);
+
   return (
-    <nav className="navbar">
+    <nav 
+      className="navbar" 
+      style={{ top: visible ? "0" : "-100px" }} // move navbar up when hidden
+    >
       <div className="navbar-container">
         {/* Logo */}
         <div className="logo">
@@ -33,7 +56,6 @@ const Navbar = () => {
         {/* Right Buttons */}
         <div className="nav-buttons">
           <button className="support">Client Support</button>
-          {/* phone can remain a tel link because it’s not a route */}
           <a className="phone" href="tel:18882590537">+1 888-259-0537</a>
           <Link to="/contact" className="contact">Contact Us</Link>
         </div>
