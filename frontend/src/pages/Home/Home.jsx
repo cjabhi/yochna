@@ -62,8 +62,6 @@ const Home = () => {
 
         <ContactSection />
 
-        <Footer />
-
     </div>
 
   )

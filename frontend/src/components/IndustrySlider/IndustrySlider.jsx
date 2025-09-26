@@ -149,7 +149,9 @@ const App = () => {
       </div>
 
       <div className="view-all-container">
+        <a href="/business#industries">
         <button className="view-all-button">View All Industries</button>
+        </a>
       </div>
 
     </div>

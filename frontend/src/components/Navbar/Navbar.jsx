@@ -29,7 +29,7 @@ const Navbar = () => {
   return (
     <nav 
       className="navbar" 
-      style={{ top: visible ? "0" : "-100px" }} // move navbar up when hidden
+      style={{ top: visible ? "0" : "-100px" }}
     >
       <div className="navbar-container">
         {/* Logo */}
@@ -41,12 +41,38 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           <li className="dropdown">
-            <Link to="/company">Company ▾</Link>
-            <ul className="dropdown-menu">
-              <li><Link to="/about">About Us</Link></li>
-              <li><Link to="/team">Our Team</Link></li>
-            </ul>
-          </li>
+  <Link to="/company">Company ▾</Link>
+  <div className="dropdown-menu-fullwidth">
+    <div className="dropdown-menu-inner">
+      
+      {/* Left Column */}
+      <div className="dropdown-col">
+        <h3>Streamlining Recruiting in an Overcoming Workforce Environment.</h3>
+      </div>
+
+      {/* Middle Column - vertical links */}
+      <div className="dropdown-col">
+        <Link to="/about">About Us</Link>
+        <Link to="/team">Why Us</Link>
+        <Link to="/diverse">Diversity Equity & Inclusion</Link>
+      </div>
+
+      {/* Right Column */}
+      <div className="dropdown-col" id="dropdown-col-right">
+        <ul>
+          <li><span className="icon">🏫</span> University and College Partnerships</li>
+          <li><span className="icon">🏢</span> Industry Associations</li>
+          <li><span className="icon">🤝</span> Technology Partnerships</li>
+          <li><span className="icon">👥</span> Diversity and Inclusion Organizations</li>
+          <li><span className="icon">🏬</span> Local Business Chambers</li>
+        </ul>
+      </div>
+
+
+    </div>
+  </div>
+</li>
+
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/business">For Business</Link></li>
           <li><Link to="/careers">Careers</Link></li>
@@ -70,9 +96,22 @@ const Navbar = () => {
       <div className={`mobile-menu ${isOpen ? "open" : ""}`}>
         <Link to="/" onClick={toggleMenu}>Home</Link>
         <details>
-          <summary>Company</summary>
-          <Link to="/about" onClick={toggleMenu}>About Us</Link>
-          <Link to="/team" onClick={toggleMenu}>Our Team</Link>
+          <summary style={{ cursor: 'pointer' }}>Company</summary>
+
+          <Link 
+            to="/about" 
+            onClick={toggleMenu} 
+            style={{ display: 'block', padding: '5px 0', textDecoration: 'none', color: '#000' }}
+          >
+            About Us
+          </Link>
+          <Link 
+            to="/team" 
+            onClick={toggleMenu} 
+            style={{ display: 'block', padding: '5px 0', textDecoration: 'none', color: '#000' }}
+          >
+            Our Team
+          </Link>
         </details>
         <Link to="/services" onClick={toggleMenu}>Services</Link>
         <Link to="/business" onClick={toggleMenu}>For Business</Link>

@@ -32,7 +32,10 @@ const Footer = () => {
               </li>
             ))}
           </ul>
+          <a href="/business#allindustries">
+
           <button className="btn">View all Industries</button>
+          </a>
         </div>
 
         {/* Company */}
@@ -49,7 +52,9 @@ const Footer = () => {
         {/* Contact + Newsletter */}
         <div className="footer-column contact">
           <h2 className="logo">Yo<span>CHANA</span></h2>
-          <button className="btn">Schedule Consultation</button>
+          <button className="btn"
+            onClick={() => {document.getElementById("form-container")?.scrollIntoView({ behavior: "smooth" });}}
+          >Schedule Consultation</button>
 
           <p>📞 Tollfree: 888-259-0537</p>
           <p>✉️ hello@yochana.com</p>

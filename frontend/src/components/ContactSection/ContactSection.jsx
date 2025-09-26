@@ -144,7 +144,7 @@ const ContactSection = () => {
           </div>
         </div>
 
-        <div className="form-container">
+        <div className="form-container" id="form-container">
           <div className="header">
             <h1 className="header-title">Get in Touch</h1>
             <div className="header-line"></div>
