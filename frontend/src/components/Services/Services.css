@@ -37,6 +37,11 @@
   color: #0044cc;
 }
 
+.service-icon img {
+  width: 5rem;
+  border-radius: 5px;
+}
+
 .service-title {
   font-size: 1.3rem;
   margin-bottom: 10px;

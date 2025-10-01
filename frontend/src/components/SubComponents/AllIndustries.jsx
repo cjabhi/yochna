@@ -1,463 +1,252 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from "react";
+import axios from "axios";
 
-const App = () => {
-  const [expandedCategory, setExpandedCategory] = useState(null);
+const IndustriesPage = ({ url }) => {
+  const [categories, setCategories] = useState([]);
+  const [expandedId, setExpandedId] = useState(null);
 
-  const categories = [
-    {
-      name: 'High Tech Industries',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]
-    },
-    { name: 'Administrative',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ] },
-    { name: 'Construction',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ] },
-    { name: 'Customer Service',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ] },
-    { name: 'Energy' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]},
-    { name: 'Financial Services' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]},
-    { name: 'Healthcare' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]},
-    { name: 'AI / ML',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ] },
-    { name: 'Automotive' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]},
-    { name: 'Creative',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ] },
-    { name: 'ERP',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ] },
-    { name: 'Engineering' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]},
-    { name: 'Hospitality' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]},
-    { name: 'Legal',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ] },
-    { name: 'Manufacturing' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]},
-    { name: 'Media & Entertainment' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]},
-    { name: 'Sales',
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ] },
-    { name: 'Real Estate' ,
-      image: 'https://i.ibb.co/6y45sKq/image-6047bd.jpg',
-      description: 'Explore limitless opportunities in high-tech industries with us. Your future in innovation starts here',
-      list: [
-        'Web Developer',
-        'Software Development',
-        'Information Security Analysts',
-        'Database Administrator',
-        'Information technology management',
-        'User experience design',
-        'Computer Systems Analyst',
-        'Software engineering',
-        'Product Manager',
-        'Computer Network Architects',
-      ]}
-  ];
+  useEffect(() => {
+    fetchList();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
-  const handleToggle = (categoryName) => {
-    setExpandedCategory(expandedCategory === categoryName ? null : categoryName);
+  const fetchList = async () => {
+    try {
+      const res = await axios.get(`${url}/api/industry/list`);
+      if (res.data && res.data.success) setCategories(res.data.data || []);
+      else {
+        console.error("Fetch error:", res.data);
+        alert("Error fetching industries");
+      }
+    } catch (err) {
+      console.error("Axios error:", err);
+      alert("Network or server error");
+    }
   };
 
-  return (
-    <div className="yochana-container">
-      <style jsx="true">{`
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+  const toggle = (id) => {
+    setExpandedId((prev) => (prev === id ? null : id));
+  };
 
-        .yochana-container {
-          font-family: 'Inter', sans-serif;
-          background-color: #e6e6fa; /* Light purple background */
+  const leftColumn = categories.filter((_, i) => i % 2 === 0);
+  const rightColumn = categories.filter((_, i) => i % 2 === 1);
+
+  return (
+    <div className="yo-container">
+      <style jsx="true">{`
+        @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+
+        .yo-container {
+          font-family: "Inter", sans-serif;
+          background-color: #e6e6fa;
           padding: 2rem;
-          min-height: 100vh;
           box-sizing: border-box;
           display: flex;
           flex-direction: column;
-          align-items: center;
+          align-items: flex-start;
         }
 
-        .header-content {
-          max-width: 1200px;
-          margin-bottom: 2rem;
-        }
-
-        .header-content h1 {
-          font-size: 2.5rem;
-          font-weight: 700;
-          color: #1a1a40; /* Dark text color */
-          margin-bottom: 1rem;
-        }
-
-        .header-content p {
-          font-size: 1rem;
-          color: #333;
-          line-height: 1.6;
-        }
-
-        .categories-grid {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 1rem;
+        .yo-header {
           max-width: 1200px;
           width: 100%;
+          margin-bottom: 2rem;
+          text-align: center;
         }
 
-        .category-item {
-          background-color: #fff;
-          border: 1px solid #ddd;
+        .yo-header h1 {
+          font-size: 2rem;
+          margin: 0 0 0.5rem 0;
+          color: #1a1a40;
+        }
+
+        .yo-header p {
+          margin: 0;
+          color: #444;
+        }
+
+        .yo-columns {
+          display: flex;
+          gap: 1rem;
+          width: 90%;
+          align-items: flex-start;
+          margin: auto;
+          min-width: 320px;
+        }
+
+        .yo-column {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          gap: 1rem;
+        }
+
+        .yo-card {
+          background: #fff;
+          border: 1px solid #e8e8ee;
           border-radius: 8px;
+          box-shadow: 0 4px 12px rgba(20, 20, 50, 0.04);
           overflow: hidden;
-          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
-          transition: all 0.3s ease-in-out;
+          transition: transform 0.18s ease, box-shadow 0.18s ease;
         }
 
-        .category-header {
+        .yo-card:hover {
+          transform: translateY(-3px);
+          box-shadow: 0 8px 22px rgba(20, 20, 50, 0.07);
+        }
+
+        .yo-card-header {
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 1rem 1.5rem;
+          padding: 0.85rem 1rem;
           cursor: pointer;
           font-weight: 600;
-          font-size: 1.1rem;
-          color: #444;
-          user-select: none;
+          color: #333;
         }
 
-        .toggle-icon {
-          font-size: 1.5rem;
-          font-weight: 600;
-          color: #444;
-          transition: transform 0.3s ease;
+        .yo-toggle {
+          font-size: 1.2rem;
         }
 
-        .category-content {
+        .yo-card-content {
           overflow: hidden;
           max-height: 0;
-          transition: max-height 0.5s ease-in-out;
+          transition: max-height 0.45s ease, padding 0.25s ease;
+          padding: 0 1rem;
         }
 
-        .category-item.expanded .category-content {
-          max-height: 1000px; /* A large value to accommodate content */
-          padding: 1rem 1.5rem;
-        }
-        
-        .category-item.expanded .category-header {
-          border-bottom: 1px solid #ddd;
+        .yo-card.expanded .yo-card-content {
+          max-height: 1600px;
+          padding: 1rem;
         }
 
-        .expanded-image {
+        .yo-image {
           width: 100%;
-          border-radius: 8px;
+          height: 220px;
+          object-fit: cover;
+          display: block;
+          border-radius: 6px;
           margin-bottom: 1rem;
-          max-height: 400px;
         }
 
-        .expanded-description {
-          font-size: 0.95rem;
-          line-height: 1.5;
-          margin-bottom: 1rem;
+        .yo-desc {
+          margin: 0 0 1rem 0;
           color: #555;
+          line-height: 1.5;
+          font-size: 0.95rem;
         }
 
-        .expanded-list {
+        .yo-list {
           list-style: none;
           padding: 0;
           margin: 0;
         }
 
-        .expanded-list li {
+        .yo-list li {
           display: flex;
           align-items: center;
           margin-bottom: 0.5rem;
-          font-size: 0.9rem;
-          color: #555;
+          color: #444;
+          font-size: 0.95rem;
         }
 
-        .expanded-list li::before {
-          content: '✔';
-          color: #007bff; /* Blue checkmark */
-          margin-right: 0.5rem;
-          font-size: 1.2em;
+        .yo-list li::before {
+          content: "✔";
+          margin-right: 0.6rem;
+          color: #007bff;
+          font-size: 1.05rem;
         }
 
-        /* Responsive design */
         @media (max-width: 768px) {
-          .yochana-container {
-            padding: 1rem;
-          }
-
-          .header-content h1 {
-            font-size: 1.8rem;
-          }
-
-          .categories-grid {
-            grid-template-columns: 1fr;
-          }
-
-          .category-header {
-            font-size: 1rem;
-            padding: 0.8rem 1rem;
-          }
-
-          .expanded-content {
-            padding: 0.8rem 1rem;
+          .yo-columns {
+            flex-direction: column;
           }
         }
       `}</style>
 
-      <div className="header-content" >
-        <h1>Yochana – Your Trusted Partner for IT Talent Solutions & Hiring</h1>
-        <p>Servicing all sectors and roles Yochana, a top employment firm, can locate the best people for any industry or position using its knowledge, contacts, and network.</p>
+      <div className="yo-header">
+        <h1>Yochana – Your Trusted Partner for IT Talent</h1>
+        <p>
+          We connect companies with skilled professionals across industries.
+          Click a card to expand its details.
+        </p>
       </div>
 
-      <div className="categories-grid" id="allindustries">
-        {categories.map((category, index) => (
-          <div
-            key={index}
-            className={`category-item ${expandedCategory === category.name ? 'expanded' : ''}`}
-          >
-            <div className="category-header" onClick={() => handleToggle(category.name)}>
-              <span>{category.name}</span>
-              <span className="toggle-icon">{expandedCategory === category.name ? '-' : '+'}</span>
-            </div>
-            {category.description && (
-              <div className="category-content">
-                <img src={category.image} alt={category.name} className="expanded-image" />
-                <p className="expanded-description">{category.description}</p>
-                <ul className="expanded-list">
-                  {category.list.map((item, i) => (
-                    <li key={i}>{item}</li>
-                  ))}
-                </ul>
+      <div className="yo-columns">
+        <div className="yo-column" id="yo-left">
+          {leftColumn.map((category, i) => {
+            const id = category._id ?? `${category.name}-${i}`;
+            const list = category.list ?? [];
+            return (
+              <div
+                className={`yo-card ${expandedId === id ? "expanded" : ""}`}
+                key={id}
+              >
+                <div className="yo-card-header" onClick={() => toggle(id)}>
+                  <span>{category.name}</span>
+                  <span className="yo-toggle">
+                    {expandedId === id ? "−" : "+"}
+                  </span>
+                </div>
+
+                {category.description && (
+                  <div className="yo-card-content">
+                    <img
+                      src={`${url}/images/${category.image}`}
+                      alt={category.name}
+                      className="yo-image"
+                    />
+                    <p className="yo-desc">{category.description}</p>
+                    <ul className="yo-list">
+                      {list.map((li, idx) => (
+                        <li key={idx}>{li}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
-            )}
-          </div>
-        ))}
+            );
+          })}
+        </div>
+
+        <div className="yo-column" id="yo-right">
+          {rightColumn.map((category, i) => {
+            const id = category._id ?? `${category.name}-${i + 1000}`;
+            const list = category.list ?? [];
+            return (
+              <div
+                className={`yo-card ${expandedId === id ? "expanded" : ""}`}
+                key={id}
+              >
+                <div className="yo-card-header" onClick={() => toggle(id)}>
+                  <span>{category.name}</span>
+                  <span className="yo-toggle">
+                    {expandedId === id ? "−" : "+"}
+                  </span>
+                </div>
+
+                {category.description && (
+                  <div className="yo-card-content">
+                    <img
+                      src={`${url}/images/${category.image}`}
+                      alt={category.name}
+                      className="yo-image"
+                    />
+                    <p className="yo-desc">{category.description}</p>
+                    <ul className="yo-list">
+                      {list.map((li, idx) => (
+                        <li key={idx}>{li}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+        </div>
       </div>
     </div>
   );
 };
 
-export default App;
+export default IndustriesPage;

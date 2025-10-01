@@ -51,7 +51,8 @@ const Footer = () => {
 
         {/* Contact + Newsletter */}
         <div className="footer-column contact">
-          <h2 className="logo">Yo<span>CHANA</span></h2>
+          {/* <h2 className="logo">Yo<span>CHANA</span></h2> */}
+          <img src="images/logo.png" alt=""  className="logo"/>
           <button className="btn"
             onClick={() => {document.getElementById("form-container")?.scrollIntoView({ behavior: "smooth" });}}
           >Schedule Consultation</button>
@@ -91,11 +92,14 @@ const Footer = () => {
 <div className="footer-bottom">
   <div className="footer-container">
     {/* Logo */}
-    <h2 className="logo">
-      <span className="red">Y</span>
+
+    <img src="images/logo.png" alt=""  className="logo"/>
+    {/* <h2 className="logo"> */}
+      {/* <span className="red">Y</span>
       <span className="blue">o</span>
-      <span className="black">CHANA</span>
-    </h2>
+      <span className="black">CHANA</span> */}
+      
+    {/* </h2> */}
 
     {/* Divider */}
     <span className="divider" />
@@ -107,7 +111,7 @@ const Footer = () => {
     <span className="divider" />
 
     {/* Contact */}
-    <p>T: +1 248-213-6465<br />E: hello@yochana.com</p>
+    <p>T: +91 9650481240<br />E: hello@yochana.com</p>
 
     {/* Divider */}
     <span className="divider" />

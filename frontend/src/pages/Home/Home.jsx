@@ -10,7 +10,7 @@ import OfficeLocations from '../../components/OfficeLocations/OfficeLocations';
 import ContactSection from '../../components/ContactSection/ContactSection';
 import Footer from '../../components/FooterSection/FooterSection';
 
-const Home = () => {
+const Home = ({url}) => {
   return (
     <div>
         <Carousel />
@@ -52,7 +52,7 @@ const Home = () => {
 
         <FeaturesSection />
 
-        <Services />
+        <Services url={url} />
 
         <IndustrySlider />
 

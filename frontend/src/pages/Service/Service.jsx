@@ -3,7 +3,7 @@ import './Service.css';
 import ContactSection from '../../components/ContactSection/ContactSection';
 import Services from '../../components/Services/Services';
 import HowSupport from '../../components/HowSupport/HowSupport';
-const Service = () => {
+const Service = ({url}) => {
     return (
         <div>
             <section className="wf-hero">
@@ -25,7 +25,7 @@ const Service = () => {
                 {/* Decorative overlay */}
                 <div className="wf-pattern" aria-hidden="true"></div>
             </section>
-            <Services />
+            <Services url={url} />
             <HowSupport />
             <ContactSection />
         </div>

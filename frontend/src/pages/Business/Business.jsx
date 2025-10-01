@@ -4,11 +4,11 @@ import SmileFaces from '../../components/SubComponents/SmileFaces';
 import AllIndustries from '../../components/SubComponents/AllIndustries';
 import ContactSection from '../../components/ContactSection/ContactSection';
 
-const Business = () => {
+const Business = ({url}) => {
   return (
     <div>
         <SmileFaces />
-        <AllIndustries />
+        <AllIndustries url={url} />
         <ContactSection />
     </div>
   )

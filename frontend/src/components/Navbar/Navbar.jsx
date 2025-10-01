@@ -34,7 +34,10 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo */}
         <div className="logo">
-          <Link to="/">Yo<span>CHANA</span></Link>
+          <Link to="/">
+          <img src="images/logo.png" alt="" />
+          {/* Yo<span>CHANA</span> */}
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -82,7 +85,7 @@ const Navbar = () => {
         {/* Right Buttons */}
         <div className="nav-buttons">
           <button className="support">Client Support</button>
-          <a className="phone" href="tel:18882590537">+1 888-259-0537</a>
+          <a className="phone" href="tel:18882590537">+91 9650481240</a>
           <Link to="/contact" className="contact">Contact Us</Link>
         </div>
 

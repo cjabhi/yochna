@@ -1,0 +1,34 @@
+import React from 'react'
+import './Sidebar.css'
+import { NavLink } from 'react-router-dom'
+
+const Sidebar = () => {
+  return (
+    <div className='sidebar' >
+      <div className="sidebar-options">
+        <NavLink to={'/add-service'} className="sidebar-option">
+          <img src= '/images/add_icon.png' alt="" />
+          <p>Add Service</p>
+        </NavLink>
+        <NavLink to={'/list-services'} className="sidebar-option">
+          <img src='images/list_icon.png' alt="" />
+          <p>List Services</p>
+        </NavLink>
+        <NavLink to={'/add-industry'} className="sidebar-option">
+          <img src= '/images/add_icon.png' alt="" />
+          <p>Add Industry</p>
+        </NavLink>
+        <NavLink to={'/list-industries'} className="sidebar-option">
+          <img src= '/images/list_icon.png' alt="" />
+          <p>List Industries</p>
+        </NavLink>
+        {/* <NavLink to={'/orders'} className="sidebar-option">
+          <img src='images/list_icon.png' alt="" />
+          <p>Orders</p>
+        </NavLink> */}
+      </div>
+    </div>
+  )
+}
+
+export default Sidebar

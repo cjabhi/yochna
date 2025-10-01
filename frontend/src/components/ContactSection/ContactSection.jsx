@@ -112,7 +112,7 @@ const ContactSection = () => {
               Call us at:
             </p>
             <p className="phone-number">
-              +1248-213-6465
+              +91 9650481240
             </p>
           </div>
 

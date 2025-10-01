@@ -8,14 +8,15 @@ import Service from './pages/Service/Service.jsx';
 import Business from './pages/Business/Business.jsx';
 import Careers from './pages/Careers/Careers.jsx';
 function App() {
+  const url = "http://localhost:5000";
   return (
     <div className="App">
       <Navbar />
       <Routes>
-        <Route path='/' element = {<Home />} />
+        <Route path='/' element = {<Home url={url} />} />
         <Route path='/contact' element = {<Contact />} />
-        <Route path='/services' element = {<Service />} />
-        <Route path='/business' element = {<Business />} />
+        <Route path='/services' element = {<Service url={url} />} />
+        <Route path='/business' element = {<Business url={url} />} />
         <Route path='/careers' element = {<Careers />} />
       </Routes>
       <Footer />
