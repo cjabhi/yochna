@@ -11,6 +11,7 @@ import ListIndustries from './pages/ListIndustries/ListIndustries';
 import ListService from './pages/ListServices/ListServices';
 import EditService from './pages/EditService/EditService';
 import EditIndustry from './pages/EditIndustry/EditIndustry';
+import Applicants from './pages/Applicants/Applicants';
 
 function App() {
   const url = "http://localhost:5000";
@@ -29,7 +30,7 @@ function App() {
           <Route path='/add-industry' element = {<AddInudstry url = {url} />} />
           <Route path='/list-industries' element = {<ListIndustries url = {url} />} />
           <Route path='/edit-industry/:id' element = {<EditIndustry url = {url} />} />
-          {/* <Route path='/orders' element = {<Orders url = {url} />} /> */}
+          <Route path='/cvs' element = {<Applicants url = {url} />} />
         </Routes>
       </div>
     </div>

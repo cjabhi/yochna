@@ -4,6 +4,7 @@ import 'dotenv/config';
 import serviceRouter from "./routes/serviceRoute.js";
 import industryRouter from "./routes/industryRoute.js";
 import connectDB from "./config/db.js";
+import cvRouter from "./routes/cvRoute.js";
 
 // app config
 
@@ -23,8 +24,10 @@ connectDB();
 
 // api endpoints
 app.use("/images",express.static('uploads'))
+app.use("/uploads/resumes", express.static("uploads/resumes"));
 app.use("/api/service",serviceRouter);
 app.use("/api/industry", industryRouter);
+app.use("/api/cv", cvRouter);
 
 
 app.get("/" , (req , res)=>{

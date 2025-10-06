@@ -233,6 +233,9 @@
     align-items: flex-start;
     gap: 1rem;
   }
+  .footer-container p{
+    margin: auto;
+  }
   .divider {
     display: none;
   }

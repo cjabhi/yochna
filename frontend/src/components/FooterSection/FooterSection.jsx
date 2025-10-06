@@ -105,7 +105,8 @@ const Footer = () => {
     <span className="divider" />
 
     {/* Address */}
-    <p>23000 Commerce Drive, Farmington Hills, MI 48335, USA</p>
+    <p>B1, Building No 50, Block-C Sec-6,
+Noida, Uttar Pradesh – 201301</p>
 
     {/* Divider */}
     <span className="divider" />
