@@ -16,8 +16,8 @@ import Login from './pages/Login/Login';
 import { AuthProvider, AuthContext } from './context/AuthContext';
 import { useContext } from 'react';
 
+const url = "https://adamant-backend.onrender.com";
 function AppRoutes() {
-  const url = "http://localhost:5000";
 
   return (
     <Routes>
@@ -28,7 +28,7 @@ function AppRoutes() {
       <Route path='/list-industries' element = {<ListIndustries url = {url} />} />
       <Route path='/edit-industry/:id' element = {<EditIndustry url = {url} />} />
       <Route path='/cvs' element = {<Applicants url = {url} />} />
-      <Route path="*" element={<Navigate to="/list-services" replace />} />
+      {/* <Route path="*" element={<Navigate to="/list-services" replace />} /> */}
     </Routes>
   )
 }
@@ -49,7 +49,7 @@ function AppContent() {
     return (
       <div style={{position:'fixed' , width:'100vw', height:'100vh'}}>
         <Routes>
-          <Route path="/login" element={<Login />} />
+          <Route path="/login" element={<Login url = {url} />} />
           <Route path="*" element={<Navigate to="/login" replace />} />
         </Routes>
       </div>

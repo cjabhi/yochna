@@ -37,7 +37,7 @@ const Career = ({url}) => {
     if (formData.resume) data.append("resume", formData.resume);
 
     try {
-      const res = await fetch("http://localhost:5000/api/cv/add", {
+      const res = await fetch(`${url}/api/cv/add`, {
         method: "POST",
         body: data,
       });

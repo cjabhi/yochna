@@ -3,7 +3,7 @@ import axios from 'axios';
 import { AuthContext } from '../../context/AuthContext';
 import './Login.css';
 
-const Login = () => {
+const Login = ({url}) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
@@ -13,7 +13,7 @@ const Login = () => {
     e.preventDefault();
     setError('');
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', { username, password });
+      const response = await axios.post(`${url}/api/admin/login`, { username, password });
       if (response.data.success) {
         login(response.data.token);
       } else {
