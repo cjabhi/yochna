@@ -1,4 +1,4 @@
-import serviceModel from "../models/ServiceModel.js";
+import serviceModel from "../models/serviceModel.js";
 import fs from 'fs';
 
 

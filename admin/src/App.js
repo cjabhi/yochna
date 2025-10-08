@@ -1,5 +1,5 @@
 import './App.css';
-import {Routes , Route} from 'react-router-dom'
+import {Routes , Route, Navigate} from 'react-router-dom'
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -12,29 +12,60 @@ import ListService from './pages/ListServices/ListServices';
 import EditService from './pages/EditService/EditService';
 import EditIndustry from './pages/EditIndustry/EditIndustry';
 import Applicants from './pages/Applicants/Applicants';
+import Login from './pages/Login/Login';
+import { AuthProvider, AuthContext } from './context/AuthContext';
+import { useContext } from 'react';
 
-function App() {
+function AppRoutes() {
   const url = "http://localhost:5000";
 
   return (
-    <div style={{position:'fixed' , width:'100vw', height:'100vh'}}>
+    <Routes>
+      <Route path='/add-service' element = {<AddService url = {url} />} />
+      <Route path='/list-services' element = {<ListService url = {url} />} />
+      <Route path='/edit-service/:id' element = {<EditService url = {url} />} />
+      <Route path='/add-industry' element = {<AddInudstry url = {url} />} />
+      <Route path='/list-industries' element = {<ListIndustries url = {url} />} />
+      <Route path='/edit-industry/:id' element = {<EditIndustry url = {url} />} />
+      <Route path='/cvs' element = {<Applicants url = {url} />} />
+      <Route path="*" element={<Navigate to="/list-services" replace />} />
+    </Routes>
+  )
+}
+
+function App() {
+  return (
+    <AuthProvider>
       <ToastContainer />
+      <AppContent />
+    </AuthProvider>
+  )
+}
+
+function AppContent() {
+  const { auth } = useContext(AuthContext);
+
+  if (!auth) {
+    return (
+      <div style={{position:'fixed' , width:'100vw', height:'100vh'}}>
+        <Routes>
+          <Route path="/login" element={<Login />} />
+          <Route path="*" element={<Navigate to="/login" replace />} />
+        </Routes>
+      </div>
+    );
+  }
+
+  return (
+    <div style={{position:'fixed' , width:'100vw', height:'100vh'}}>
       <Navbar />
       <hr />
       <div className="app-content">
         <Sidebar />
-        <Routes>
-          <Route path='/add-service' element = {<AddService url = {url} />} />
-          <Route path='/list-services' element = {<ListService url = {url} />} />
-          <Route path='/edit-service/:id' element = {<EditService url = {url} />} />
-          <Route path='/add-industry' element = {<AddInudstry url = {url} />} />
-          <Route path='/list-industries' element = {<ListIndustries url = {url} />} />
-          <Route path='/edit-industry/:id' element = {<EditIndustry url = {url} />} />
-          <Route path='/cvs' element = {<Applicants url = {url} />} />
-        </Routes>
+        <AppRoutes />
       </div>
     </div>
-  )
+  );
 }
 
 export default App;
