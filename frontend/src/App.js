@@ -8,7 +8,7 @@ import Service from './pages/Service/Service.jsx';
 import Business from './pages/Business/Business.jsx';
 import Careers from './pages/Careers/Careers.jsx';
 function App() {
-  const url = "http://localhost:5000";
+  const url = "https://adamant-backend.onrender.com";
   return (
     <div className="App">
       <Navbar />

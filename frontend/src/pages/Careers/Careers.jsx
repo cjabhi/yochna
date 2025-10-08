@@ -2,10 +2,10 @@ import React from 'react'
 import ContactSection from '../../components/ContactSection/ContactSection'
 import Career from '../../components/Career/Career'
 
-const Careers = () => {
+const Careers = ({url}) => {
   return (
     <div>
-        <Career />
+        <Career url={url} />
         <ContactSection />
     </div>
   )
