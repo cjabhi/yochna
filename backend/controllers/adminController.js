@@ -10,7 +10,7 @@ const loginAdmin = async (req, res) => {
     
 
     if (username === admin_username && password === admin_password) {
-      const token = jwt.sign({ user: { id: username, password } }, hash, { expiresIn: '1h' });
+      const token = jwt.sign({ user: { id: username, password } }, hash, { expiresIn: '30d' });
       res.json({ success: true, token });
     } else {
       res.json({ success: false, message: 'Invalid credentials' });

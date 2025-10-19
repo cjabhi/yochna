@@ -6,6 +6,7 @@ import industryRouter from "./routes/industryRoute.js";
 import connectDB from "./config/db.js";
 import cvRouter from "./routes/cvRoute.js";
 import adminRouter from "./routes/adminRoute.js";
+import vacancyRouter from "./routes/vacancyRoute.js";
 
 // app config
 
@@ -30,6 +31,7 @@ app.use("/api/service",serviceRouter);
 app.use("/api/industry", industryRouter);
 app.use("/api/cv", cvRouter);
 app.use("/api/admin", adminRouter);
+app.use("/api/vacancy", vacancyRouter);
 
 app.get("/" , (req , res)=>{
     res.send("API Working")

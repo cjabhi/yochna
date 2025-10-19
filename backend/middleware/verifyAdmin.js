@@ -1,7 +1,7 @@
 
-import {jwt} from 'jsonwebtoken';
+import jwt from 'jsonwebtoken';
 
-const admin_username = process.env.USERNAME;
+const admin_username = process.env.ADMINNAME;
 const admin_password = process.env.PASSWORD;
 const hash = process.env.hash;
 

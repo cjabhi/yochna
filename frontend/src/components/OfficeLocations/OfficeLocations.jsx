@@ -7,7 +7,7 @@ const locations = [
     name: "Noida, India",
   },
   {
-    image: "images/mumbai.jpg",
+    image: "images/delhi.jpg",
     name: "Delhi, India",
   },
   {

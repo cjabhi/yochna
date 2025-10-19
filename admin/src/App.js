@@ -12,6 +12,8 @@ import ListService from './pages/ListServices/ListServices';
 import EditService from './pages/EditService/EditService';
 import EditIndustry from './pages/EditIndustry/EditIndustry';
 import Applicants from './pages/Applicants/Applicants';
+import PostVacancy from './pages/PostVacancy/PostVacancy';
+import ManageVacancies from './pages/ManageVacancies/ManageVacancies';
 import Login from './pages/Login/Login';
 import { AuthProvider, AuthContext } from './context/AuthContext';
 import { useContext } from 'react';
@@ -28,6 +30,8 @@ function AppRoutes() {
       <Route path='/list-industries' element = {<ListIndustries url = {url} />} />
       <Route path='/edit-industry/:id' element = {<EditIndustry url = {url} />} />
       <Route path='/cvs' element = {<Applicants url = {url} />} />
+      <Route path='/post-vacancy' element = {<PostVacancy url = {url} />} />
+      <Route path='/manage-vacancies' element = {<ManageVacancies url = {url} />} />
       {/* <Route path="*" element={<Navigate to="/list-services" replace />} /> */}
     </Routes>
   )

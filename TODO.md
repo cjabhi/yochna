@@ -1,0 +1,5 @@
+- [x] Create PostVacancy page (form for jobTitle, description, qualification)
+- [x] Create ManageVacancies page (list vacancies with delete button)
+- [x] Add routes in App.js for /post-vacancy and /manage-vacancies
+- [x] Update Sidebar.jsx to include "Post Vacancy" and "Manage Vacancies" links
+- [ ] Test the functionality by running the admin app and backend

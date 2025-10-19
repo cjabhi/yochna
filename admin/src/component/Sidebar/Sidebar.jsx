@@ -26,6 +26,14 @@ const Sidebar = () => {
           <img src='images/career_icon.png' alt="" />
           <p>Applicants</p>
         </NavLink>
+        <NavLink to={'/post-vacancy'} className="sidebar-option">
+          <img src= '/images/add_icon.png' alt="" />
+          <p>Post Vacancy</p>
+        </NavLink>
+        <NavLink to={'/manage-vacancies'} className="sidebar-option">
+          <img src='images/list_icon.png' alt="" />
+          <p>Manage Vacancies</p>
+        </NavLink>
       </div>
     </div>
   )
