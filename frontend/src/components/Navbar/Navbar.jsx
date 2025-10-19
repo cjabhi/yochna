@@ -57,7 +57,7 @@ const Navbar = () => {
       <div className="dropdown-col">
         <Link to="/about">About Us</Link>
         <Link to="/team">Why Us</Link>
-        <Link to="/diverse">Diversity Equity & Inclusion</Link>
+        {/* <Link to="/diverse">Diversity Equity & Inclusion</Link> */}
       </div>
 
       {/* Right Column */}
@@ -79,7 +79,7 @@ const Navbar = () => {
           <li><Link to="/services">Services</Link></li>
           <li><Link to="/business">For Business</Link></li>
           <li><Link to="/careers">Careers</Link></li>
-          <li><Link to="/blog">Blog</Link></li>
+          {/* <li><Link to="/blog">Blog</Link></li> */}
         </ul>
 
         {/* Right Buttons */}
@@ -109,17 +109,17 @@ const Navbar = () => {
             About Us
           </Link>
           <Link 
-            to="/team" 
+            to="/whyus" 
             onClick={toggleMenu} 
             style={{ display: 'block', padding: '5px 0', textDecoration: 'none', color: '#000' }}
           >
-            Our Team
+            Why Us
           </Link>
         </details>
         <Link to="/services" onClick={toggleMenu}>Services</Link>
         <Link to="/business" onClick={toggleMenu}>For Business</Link>
         <Link to="/careers" onClick={toggleMenu}>Careers</Link>
-        <Link to="/blog" onClick={toggleMenu}>Blog</Link>
+        {/* <Link to="/blog" onClick={toggleMenu}>Blog</Link> */}
         <Link to="/contact" onClick={toggleMenu}>Contact</Link>
       </div>
     </nav>

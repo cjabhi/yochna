@@ -3,21 +3,21 @@ import "./OfficeLocations.css";
 
 const locations = [
   {
-    image: "images/hyderabad.png",
-    name: "Hyderabad, India",
-  },
-  {
-    image: "images/mumbai.jpg",
-    name: "Mumbai, India",
-  },
-  {
     image: "images/noida.jpg",
     name: "Noida, India",
   },
   {
-    image: "images/banglore.jpg",
-    name: "Bangalore, India",
+    image: "images/mumbai.jpg",
+    name: "Delhi, India",
   },
+  {
+    image: "images/hyderabad.png",
+    name: "New York , US",
+  },
+  // {
+  //   image: "images/banglore.jpg",
+  //   name: "Bangalore, India",
+  // },
 //   {
 //     image: "images/pune.jpg",
 //     name: "Pune, India",

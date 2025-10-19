@@ -114,7 +114,7 @@ const App = () => {
             We find the talent, so you can focus on your brilliance
           </h1>
           <p className="paragraph">
-            With Yochana as your talent partner, you can shine brighter, innovate with confidence, and make a meaningful impact in your industry. Together, we'll create a future filled with success and endless possibilities. Contact Yochana today and let your brilliance shine through. We find the talent, so you can focus on your brilliance.
+            With AdamantHr as your talent partner, you can shine brighter, innovate with confidence, and make a meaningful impact in your industry. Together, we'll create a future filled with success and endless possibilities. Contact AdamantHr today and let your brilliance shine through. We find the talent, so you can focus on your brilliance.
           </p>
           <a className="btn"
            onClick={() => {

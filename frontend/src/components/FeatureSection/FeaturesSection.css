@@ -29,9 +29,10 @@
 }
 
 .feature-card p {
-  font-size: 1.3rem;
+  font-size: 18px;
   line-height: 1.5;
-  color: #333;
+  /* color: #333; */
+  text-align: justify;
 }
 
 /* Mobile Responsive */

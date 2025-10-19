@@ -3,6 +3,7 @@ import './Service.css';
 import ContactSection from '../../components/ContactSection/ContactSection';
 import Services from '../../components/Services/Services';
 import HowSupport from '../../components/HowSupport/HowSupport';
+import OurProcess from '../../components/SubComponents/OurProcess';
 const Service = ({url}) => {
     return (
         <div>
@@ -12,7 +13,7 @@ const Service = ({url}) => {
                     <h1 className="wf-title">Workforce Solutions</h1>
                     <p className="wf-subtitle">
                         Elevate Your Business with Reliable and Efficient Technology-Driven
-                        Talent Solutions in the USA, Canada, and Mexico
+                        Talent Solutions in the India, and USA
                     </p>
                     <button className="wf-button"
                         onClick={() => {
@@ -27,6 +28,7 @@ const Service = ({url}) => {
             </section>
             <Services url={url} />
             <HowSupport />
+            <OurProcess />
             <ContactSection />
         </div>
 

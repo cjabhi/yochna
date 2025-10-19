@@ -79,7 +79,7 @@ const App = () => {
             </div>
             <div className="talent-contact-info">
               <p className="talent-contact-label">Email us:</p>
-              <p className="talent-contact-value">hello@yochana.com</p>
+              <p className="talent-contact-value">info@adamanthr.com</p>
             </div>
           </div>
 

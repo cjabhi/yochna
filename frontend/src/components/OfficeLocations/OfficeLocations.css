@@ -13,7 +13,7 @@
 .office-flex {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-around;
   gap: 30px;            /* space between cards */
   max-width: 1500px;
   margin: 0 auto;
@@ -25,7 +25,7 @@
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.25s ease;
-  flex: 1 1 calc(25% - 20px); /* base 4 per row with gap accounted */
+  flex: 1 1 calc(28% - 20px); /* base 4 per row with gap accounted */
   max-width: 320px;
   min-width: 220px;
 }

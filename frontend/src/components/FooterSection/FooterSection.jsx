@@ -52,13 +52,13 @@ const Footer = () => {
         {/* Contact + Newsletter */}
         <div className="footer-column contact">
           {/* <h2 className="logo">Yo<span>CHANA</span></h2> */}
-          <img src="images/logo.png" alt=""  className="logo"/>
+          {/* <img src="images/logo.png" alt=""  className="logo"/> */}
           <button className="btn"
             onClick={() => {document.getElementById("form-container")?.scrollIntoView({ behavior: "smooth" });}}
           >Schedule Consultation</button>
 
-          <p>📞 Tollfree: 888-259-0537</p>
-          <p>✉️ hello@yochana.com</p>
+          <p>📞 Phone: +91 9650481240</p>
+          <p>✉️ info@adamanthr.com</p>
 
           <input
             type="email"
@@ -112,14 +112,14 @@ Noida, Uttar Pradesh – 201301</p>
     <span className="divider" />
 
     {/* Contact */}
-    <p>T: +91 9650481240<br />E: hello@yochana.com</p>
+    <p>T: +91 9650481240<br />E: info@adamanthr.com</p>
 
     {/* Divider */}
     <span className="divider" />
 
     {/* Socials */}
     <div className="socials">
-      <a href="#"><FaLinkedin /></a>
+      <a href="https://www.linkedin.com/company/adamanthr/" target="_blank"><FaLinkedin /></a>
       <a href="#"><FaTwitter /></a>
       <a href="#"><FaFacebook /></a>
       <a href="#"><FaInstagram /></a>
@@ -128,7 +128,7 @@ Noida, Uttar Pradesh – 201301</p>
 
   {/* Bottom row */}
   <div className="footer-bottom-row">
-    <p>© 2025 Yochana</p>
+    <p>© 2025 Adamant</p>
     <div className="footer-links">
       <a href="/">Terms & Conditions</a>
       <a href="/">Privacy Policy</a>
