@@ -37,7 +37,7 @@ const Applicants = ({ url }) => {
     try {
       
       const query = jobIdFilter ? `?jobId=${jobIdFilter}` : "";
-      const res = await axios.get(`http://localhost:5000/api/cv/list${query}`);
+      const res = await axios.get(`${url}/api/cv/list${query}`);
       if (res.data.success) {
         setApplicants(res.data.data || []);
       } else {
