@@ -7,11 +7,18 @@ const addCV = async (req, res) => {
   let resume_filename = req.file ? `${req.file.filename}` : null;
 
   const cv = new CVModel({
-    name: req.body.name,
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
     email: req.body.email,
     address: req.body.address,
     mobileNo: req.body.mobileNo,
-    jobCategory: req.body.jobCategory,
+    jobId: req.body.jobId,
+    city: req.body.city,
+    state: req.body.state,
+    tenthPercentage: req.body.tenthPercentage,
+    twelfthPercentage: req.body.twelfthPercentage,
+    degree: req.body.degree,
+    degreeCgpa: req.body.degreeCgpa,
     resume: { url: resume_filename ? `uploads/resumes/${resume_filename}` : null },
   });
 
@@ -28,7 +35,7 @@ const addCV = async (req, res) => {
     }
   } catch (error) {
     console.log(error);
-    res.json({ success: false, message: "Error" });
+    res.json({ success: false, message: error });
   }
 };
 

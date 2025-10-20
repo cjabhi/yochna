@@ -11,7 +11,13 @@ const resumeSubSchema = new mongoose.Schema(
 
 const cvSchema = new mongoose.Schema(
   {
-    name: {
+    firstName: {
+      type: String,
+      required: true,
+      trim: true,
+      minlength: 2,
+    },
+    lastName: {
       type: String,
       required: true,
       trim: true,
@@ -35,10 +41,37 @@ const cvSchema = new mongoose.Schema(
       trim: true,
       match: [/^\+?[0-9]{7,15}$/, "Please enter a valid mobile number"],
     },
-    jobCategory: {
+    jobId: {
       type: String,
       required: true,
       trim: true,
+    },
+    city: {
+      type: String,
+      trim: true,
+    },
+    state: {
+      type: String,
+      trim: true,
+    },
+    tenthPercentage: {
+      type: Number,
+      min: 0,
+      max: 100,
+    },
+    twelfthPercentage: {
+      type: Number,
+      min: 0,
+      max: 100,
+    },
+    degree: {
+      type: String,
+      trim: true,
+    },
+    degreeCgpa: {
+      type: Number,
+      min: 0,
+      max: 10,
     },
     resume: {
       type: resumeSubSchema,

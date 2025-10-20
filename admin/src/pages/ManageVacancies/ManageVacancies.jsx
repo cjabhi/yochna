@@ -64,6 +64,7 @@ const ManageVacancies = ({ url }) => {
               
                 <h3>{vacancy.jobTitle}</h3>
 
+                <h4>Job Id : {vacancy.jobId}</h4>
 
               {/* Description with Read more */}
               <p className="vacancy-description">

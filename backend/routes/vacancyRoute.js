@@ -5,7 +5,7 @@ import verifyAdmin from '../middleware/verifyAdmin.js';
 const vacancyRouter = express.Router();
 
 vacancyRouter.post("/add" , verifyAdmin , addVacancy)
-vacancyRouter.get("/list", verifyAdmin , listVacancy);
+vacancyRouter.get("/list", listVacancy);
 vacancyRouter.post("/remove", verifyAdmin , removeVacancy);
 
 export default vacancyRouter;

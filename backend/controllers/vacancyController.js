@@ -5,8 +5,9 @@ import vacancyModel from "../models/vacancyModel.js";
 const addVacancy = async (req , res) => {
     try {
         // Get the count of existing vacancies to generate jobId
-        const vacancyCount = await vacancyModel.countDocuments();
-        const jobId = vacancyCount + 1;
+        const lastVacancy = await vacancyModel.findOne().sort({ jobId: -1 }).select("jobId");
+        const jobId = lastVacancy ? lastVacancy.jobId + 1 : 1;
+
 
         const vacancy = new vacancyModel({
             jobTitle:req.body.jobTitle,

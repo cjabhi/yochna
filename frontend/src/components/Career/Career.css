@@ -39,6 +39,7 @@
 .career-form input[type="email"],
 .career-form input[type="tel"],
 .career-form input[type="file"],
+.career-form input[type="number"],
 .career-form select {
   padding: 10px 12px;
   border: 1px solid #ccc;

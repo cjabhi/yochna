@@ -7,6 +7,7 @@ import Contact from './pages/Contact/Contact.jsx';
 import Service from './pages/Service/Service.jsx';
 import Business from './pages/Business/Business.jsx';
 import Careers from './pages/Careers/Careers.jsx';
+import Apply from './pages/Apply/Apply.jsx';
 function App() {
   const url = "https://adamant-backend.onrender.com";
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path='/services' element = {<Service url={url} />} />
         <Route path='/business' element = {<Business url={url} />} />
         <Route path='/careers' element = {<Careers url = {url} />} />
+        <Route path='/careers/apply/:id' element = {<Apply url={url} />} />
       </Routes>
       <Footer />
     </div>
