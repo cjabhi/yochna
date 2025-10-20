@@ -53,9 +53,11 @@ const getCV = async (req, res) => {
 // list all CVs
 const listCVs = async (req, res) => {
   try {
-    const { jobCategory } = req.query;
-    const filter = jobCategory ? { jobCategory } : {};
+    
+    const { jobId } = req.query;
+    const filter = jobId ? { jobId } : {};
     const cvs = await CVModel.find(filter);
+    
     res.json({ success: true, data: cvs });
   } catch (error) {
     console.log(error);

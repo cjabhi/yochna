@@ -8,12 +8,36 @@ const Applicants = ({ url }) => {
   const [applicants, setApplicants] = useState([]);
   const [loading, setLoading] = useState(true);
   const [filter, setFilter] = useState("");
+  const [vacancies, setVacancies] = useState([]);
+  const [jobMap, setJobMap] = useState({});
+
+  // Fetch all vacancies
+  const fetchVacancies = async () => {
+    try {
+      const res = await axios.get(`${url}/api/vacancy/list`);
+      if (res.data.success) {
+        setVacancies(res.data.data || []);
+        const map = {};
+        res.data.data.forEach(vacancy => {
+          map[vacancy.jobId] = vacancy.jobTitle;
+        });
+        setJobMap(map);
+      } else {
+        console.error("Failed to fetch vacancies");
+        toast.error("Failed to fetch vacancies");
+      }
+    } catch (error) {
+      console.error("Error fetching vacancies:", error);
+      toast.error("Error fetching vacancies");
+    }
+  };
 
   // Fetch all applicants
-  const fetchApplicants = async (jobCategoryFilter = "") => {
+  const fetchApplicants = async (jobIdFilter = "") => {
     try {
-      const query = jobCategoryFilter ? `?jobCategory=${jobCategoryFilter}` : "";
-      const res = await axios.get(`${url}/api/cv/list${query}`);
+      
+      const query = jobIdFilter ? `?jobId=${jobIdFilter}` : "";
+      const res = await axios.get(`http://localhost:5000/api/cv/list${query}`);
       if (res.data.success) {
         setApplicants(res.data.data || []);
       } else {
@@ -48,6 +72,7 @@ const Applicants = ({ url }) => {
   };
 
   useEffect(() => {
+    fetchVacancies();
     fetchApplicants();
   }, []);
 
@@ -58,9 +83,9 @@ const Applicants = ({ url }) => {
       <h2>All Applicants</h2>
 
       <div className="filter-section">
-        <label htmlFor="jobCategoryFilter">Filter by Job Category: </label>
+        <label htmlFor="jobFilter">Filter by Job: </label>
         <select
-          id="jobCategoryFilter"
+          id="jobFilter"
           value={filter}
           onChange={(e) => {
             setFilter(e.target.value);
@@ -69,10 +94,11 @@ const Applicants = ({ url }) => {
           }}
         >
           <option value="">All</option>
-          <option value="IT">IT</option>
-          <option value="guard">Guard</option>
-          <option value="housekeeping">Housekeeping</option>
-          <option value="marketing">Marketing</option>
+          {vacancies.map((vacancy) => (
+            <option key={vacancy.jobId} value={vacancy.jobId}>
+              {vacancy.jobId} - {vacancy.jobTitle}
+            </option>
+          ))}
         </select>
       </div>
 
@@ -83,11 +109,11 @@ const Applicants = ({ url }) => {
           {applicants.map((applicant) => (
             <div key={applicant._id} className="applicant-card">
               <div className="applicant-info">
-                <h3>{applicant.name}</h3>
+                <h3>{applicant.firstName + " " + applicant.lastName}</h3>
                 <p><strong>Email:</strong> {applicant.email}</p>
                 <p><strong>Address:</strong> {applicant.address || "N/A"}</p>
                 <p><strong>Mobile:</strong> {applicant.mobileNo}</p>
-                <p><strong>Job Category:</strong> {applicant.jobCategory}</p>
+                <p><strong>Applied for:</strong> {applicant.jobId} - {jobMap[applicant.jobId] || "Unknown"}</p>
               </div>
 
               <div className="applicant-buttons">

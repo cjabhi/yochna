@@ -1,15 +1,6 @@
-# TODO: Update CV Model and Career Form
+# TODO: Update Applicants Page Filter to JobId - JobTitle
 
-## Backend Changes
-- [x] Update backend/models/cvModel.js: Remove jobCategory, add jobId, firstName, lastName, city, state, tenthPercentage, twelfthPercentage, degree, degreeCgpa
-- [x] Update backend/controllers/cvController.js: Modify addCV to handle new fields
-
-## Frontend Changes
-- [x] Update frontend/src/pages/Apply/Apply.jsx: Extract jobId from URL params and pass to Career component
-- [x] Update frontend/src/components/Career/Career.jsx: Update formData state, add new form fields, remove jobCategory, set jobId from props, update submission
-
-## Testing
-- [x] Fixed axios API usage and response handling
-- [ ] Test form submission with new fields
-- [ ] Verify backend handles new data correctly
-- [ ] Check dropdowns and validation
+## Steps to Complete:
+- [x] Update backend/controllers/cvController.js: Change listCVs to filter by jobId instead of jobCategory.
+- [x] Update admin/src/pages/Applicants/Applicants.jsx: Add vacancy fetching, change filter to jobId, update select options to "jobId - jobTitle", update applicant card display to show job details.
+- [ ] Test the changes: Verify filter works, API calls succeed, and display updates correctly.
