@@ -215,6 +215,7 @@ const Career = ({url, jobId}) => {
             required
             min="0"
             max="100"
+            step="0.01"
             value={formData.tenthPercentage}
             onChange={handleChange}
           />
@@ -228,6 +229,7 @@ const Career = ({url, jobId}) => {
             required
             min="0"
             max="100"
+            step="0.01"
             value={formData.twelfthPercentage}
             onChange={handleChange}
           />
