@@ -113,6 +113,12 @@ const Applicants = ({ url }) => {
                 <p><strong>Email:</strong> {applicant.email}</p>
                 <p><strong>Address:</strong> {applicant.address || "N/A"}</p>
                 <p><strong>Mobile:</strong> {applicant.mobileNo}</p>
+                <p><strong>City:</strong> {applicant.city || "N/A"}</p>
+                <p><strong>State:</strong> {applicant.state || "N/A"}</p>
+                <p><strong>10th Percentage:</strong> {applicant.tenthPercentage !== undefined ? applicant.tenthPercentage + "%" : "N/A"}</p>
+                <p><strong>12th Percentage:</strong> {applicant.twelfthPercentage !== undefined ? applicant.twelfthPercentage + "%" : "N/A"}</p>
+                <p><strong>Degree:</strong> {applicant.degree || "N/A"}</p>
+                <p><strong>Degree CGPA:</strong> {applicant.degreeCgpa !== undefined ? applicant.degreeCgpa : "N/A"}</p>
                 <p><strong>Applied for:</strong> {applicant.jobId} - {jobMap[applicant.jobId] || "Unknown"}</p>
               </div>
 

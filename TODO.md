@@ -1,6 +1,7 @@
-# TODO: Update Applicants Page Filter to JobId - JobTitle
+# TODO for Making All Applicant Details Visible in Admin Applicants Page
 
 ## Steps to Complete:
-- [x] Update backend/controllers/cvController.js: Change listCVs to filter by jobId instead of jobCategory.
-- [x] Update admin/src/pages/Applicants/Applicants.jsx: Add vacancy fetching, change filter to jobId, update select options to "jobId - jobTitle", update applicant card display to show job details.
-- [ ] Test the changes: Verify filter works, API calls succeed, and display updates correctly.
+- [x] Update admin/src/pages/Applicants/Applicants.jsx to display additional applicant details (city, state, tenthPercentage, twelfthPercentage, degree, degreeCgpa) in the applicant-card section.
+- [x] Handle null/undefined values by showing "N/A" for missing data.
+- [x] Test the updated page to ensure all details are visible and formatted correctly.
+- [x] Check for any CSS adjustments if needed for layout.
