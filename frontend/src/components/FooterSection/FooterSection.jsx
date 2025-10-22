@@ -93,7 +93,7 @@ const Footer = () => {
   <div className="footer-container">
     {/* Logo */}
 
-    <img src="images/logo.png" alt=""  className="logo"/>
+    {/* <img src="images/logo.png" alt=""  className="logo"/> */}
     {/* <h2 className="logo"> */}
       {/* <span className="red">Y</span>
       <span className="blue">o</span>
