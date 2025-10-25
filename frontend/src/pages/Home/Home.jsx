@@ -56,7 +56,7 @@ const Home = ({url}) => {
 
         <IndustrySlider />
 
-        <Reviews />
+        {/* <Reviews /> */}
 
         <OfficeLocations />
 
