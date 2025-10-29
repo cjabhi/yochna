@@ -34,7 +34,7 @@ const FeaturesSection = () => {
       <div className="features-container">
         {features.map((feature, index) => (
           <div key={index} className="feature-card">
-            <div className="icon">{feature.icon}</div>
+            {/* <div className="icon">{feature.icon}</div> */}
             <h3>{feature.title}</h3>
             <p>{feature.description}</p>
           </div>

@@ -24,9 +24,9 @@ const Home = ({url}) => {
         </section>
 
         <section className="chamber-section">
-            <div className="chamber-logo">
+            {/* <div className="chamber-logo">
                 <img src="/images/chamber.png" alt="Windsor Essex Chamber of Commerce" />
-            </div>
+            </div> */}
 
             <div className="chamber-stats">
                 <div className="stat">
