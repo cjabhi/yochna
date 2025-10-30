@@ -11,7 +11,7 @@ const locations = [
     name: "Delhi, India",
   },
   {
-    image: "images/hyderabad.png",
+    image: "images/newyork.jpg",
     name: "New York , US",
   },
   // {
