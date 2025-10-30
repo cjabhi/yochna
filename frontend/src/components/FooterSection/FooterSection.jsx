@@ -1,132 +1,104 @@
-import React , {useState} from "react";
+import React, { useState } from "react";
 import "./FooterSection.css";
-import { FaCheckCircle, FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
+import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import ReCAPTCHA from "react-google-recaptcha";
 
 const Footer = () => {
   const [captchaToken, setCaptchaToken] = useState("");
 
-
   const onChange = (token) => {
     console.log("Received token:", token);
-    setCaptchaToken(token); // store it in React state
-    
-  }
+    setCaptchaToken(token);
+  };
+
   return (
     <>
       <footer className="footer">
         {/* Top Section */}
-        <div className="footer-top">
-          {/* Industries */}
-          <div className="footer-column">
-            <h3>Industries</h3>
-            <ul>
-              {[
-                "High Tech Industries",
-                "AI/ML",
-                "Administrative",
-                "Automotive",
-                "Construction",
-                "Creative",
-                "Customer Service",
-                "Education",
-                "Energy",
-                "Engineering",
-                "Financial Services",
-                "Healthcare",
-                "Hospitality",
-              ].map((item, index) => (
-                <li key={index}>
-                  <FaCheckCircle className="check-icon" /> {item}
-                </li>
-              ))}
-            </ul>
-            <a href="/business#allindustries">
-
-              <button className="btn">View all Industries</button>
-            </a>
+        <div className="footer-top simple">
+          {/* Column 1 - About */}
+          <div className="footer-column c1">
+            <h3>About Adamant</h3>
+            <p>
+              Adamant HR delivers innovative and scalable workforce solutions.
+              We connect businesses with top talent across industries and help
+              them grow with confidence.
+            </p>
+            <button
+              className="btn"
+              onClick={() =>
+                document
+                  .getElementById("form-container")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              }
+            >
+              Schedule Consultation
+            </button>
           </div>
 
-          {/* Company */}
+          {/* Column 2 - Quick Links */}
           <div className="footer-column">
-            <h3>Company</h3>
+            <h3>Quick Links</h3>
             <ul>
-              <li>About us</li>
-              <li>Why us</li>
-              <li>Diversity, Equity and Inclusion</li>
-              <li>Philanthropic Actions</li>
+              <li>About Us</li>
+              <li>Industries</li>
+              <li>Why Choose Us</li>
+              <li>Diversity & Inclusion</li>
+              <li>Contact</li>
             </ul>
           </div>
 
-          {/* Contact + Newsletter */}
-          <div className="footer-column contact">
-            {/* <h2 className="logo">Yo<span>CHANA</span></h2> */}
-            {/* <img src="images/logo.png" alt=""  className="logo"/> */}
-            <button className="btn"
-              onClick={() => { document.getElementById("form-container")?.scrollIntoView({ behavior: "smooth" }); }}
-            >Schedule Consultation</button>
-
-            <p>📞 Phone: +91 9650481240</p>
-            <p>✉️ info@adamanthr.com</p>
-
+          {/* Column 3 - Newsletter */}
+          <div className="footer-column">
+            <h3>Stay Updated</h3>
+            <p>Subscribe to our newsletter to get the latest insights.</p>
             <input
               type="email"
-              placeholder="Subscribe for Newsletter, Enter email"
+              placeholder="Enter your email"
               className="newsletter"
             />
-            <div className="terms">
-              <input type="checkbox" /> I accept the service terms and hereby give my consent to
-              receive the newsletter. I understand that I can unsubscribe at any time.
-            </div>
-                <ReCAPTCHA
-                  sitekey="6Lev1forAAAAAGx0nDoWXktFdYGV8JIov-wdwl4g"
-                  onChange={onChange}
-                />
-
-            <button className="btn send">Send →</button>
+            <ReCAPTCHA
+              sitekey="6Lev1forAAAAAGx0nDoWXktFdYGV8JIov-wdwl4g"
+              onChange={onChange}
+            />
+            <button className="btn send">Subscribe</button>
           </div>
         </div>
-
       </footer>
+
       {/* Bottom Section */}
       <div className="footer-bottom">
         <div className="footer-container">
-          {/* Logo */}
+          <p>
+            B1, Building No 50, Block-C Sec-6,
+            <br />
+            Noida, Uttar Pradesh – 201301
+          </p>
 
-          {/* <img src="images/logo.png" alt=""  className="logo"/> */}
-          {/* <h2 className="logo"> */}
-          {/* <span className="red">Y</span>
-      <span className="blue">o</span>
-      <span className="black">CHANA</span> */}
+          <p>
+            T: +91 9650481240 <br /> E: info@adamanthr.com
+          </p>
 
-          {/* </h2> */}
-
-          {/* Divider */}
-          {/* <span className="divider" /> */}
-
-          {/* Address */}
-          <p>B1, Building No 50, Block-C Sec-6,
-            Noida, Uttar Pradesh – 201301</p>
-
-          {/* Divider */}
-          <span className="divider" />
-
-          {/* Contact */}
-          <p>T: +91 9650481240<br />E: info@adamanthr.com</p>
-
-          {/* Divider */}
-          {/* <span className="divider" /> */}
-
-          {/* Socials */}
           <div className="socials">
-            <a href="https://www.linkedin.com/company/adamanthr/" target="_blank"><FaLinkedin /></a>
-            <a href="#"><FaTwitter /></a>
-            <a href="#"><FaFacebook /></a>
-            <a href="#"><FaInstagram /></a>
+            <a
+              href="https://www.linkedin.com/company/adamanthr/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <FaLinkedin />
+            </a>
+            <a href="#">
+              <FaTwitter />
+            </a>
+            <a href="#">
+              <FaFacebook />
+            </a>
+            <a href="#">
+              <FaInstagram />
+            </a>
           </div>
         </div>
 
-        {/* Bottom row */}
         <div className="footer-bottom-row">
           <p>© 2025 Adamant</p>
           <div className="footer-links">
@@ -136,7 +108,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-
     </>
   );
 };
