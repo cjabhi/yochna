@@ -37,6 +37,7 @@ const App = () => {
                 "Operations Management",
                 "Accounting & Finance",
                 "Sales & Marketing",
+                "Unskilled & Skilled Labor",
               ].map((item, i) => (
                 <li className="talent-list-item" key={i}>
                   <svg

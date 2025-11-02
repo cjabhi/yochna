@@ -1,16 +1,19 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import "./FooterSection.css";
 import { FaLinkedin, FaTwitter, FaFacebook, FaInstagram } from "react-icons/fa";
 import ReCAPTCHA from "react-google-recaptcha";
 
+
 const Footer = () => {
+  const navigate = useNavigate();
   const [captchaToken, setCaptchaToken] = useState("");
 
   const onChange = (token) => {
     console.log("Received token:", token);
     setCaptchaToken(token);
   };
-
+  
   return (
     <>
       <footer className="footer">
@@ -41,10 +44,10 @@ const Footer = () => {
             <h3>Quick Links</h3>
             <ul>
               <li>About Us</li>
-              <li>Industries</li>
+              {/* <li>Industries</li> */}
               <li>Why Choose Us</li>
-              <li>Diversity & Inclusion</li>
-              <li>Contact</li>
+              {/* <li>Diversity & Inclusion</li> */}
+              <li onClick={()=>{navigate('/contact')}}>Contact</li>
             </ul>
           </div>
 

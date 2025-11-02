@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom';
 
 const slides = [
   {
+    id: 0,
+    image: '/images/slide5.jpg',
+    title: 'Simplifying Business',
+    subtitle: 'offering customized HR outsourcing solutions that let you focus on your business.',
+  },
+  {
     id: 1,
     image: '/images/slide1.jpg',
     title: 'Technology Recruitment & Digital Staffing Solutions',
@@ -27,6 +33,7 @@ const slides = [
     title: 'Your Partner in Digital Transformation',
     subtitle: 'Helping organizations scale with the right talent and digital strategy.',
   },
+  
 ];
 
 const Carousel = () => {
