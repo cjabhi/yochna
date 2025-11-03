@@ -8,6 +8,7 @@ import Service from './pages/Service/Service.jsx';
 import Business from './pages/Business/Business.jsx';
 import Careers from './pages/Careers/Careers.jsx';
 import Apply from './pages/Apply/Apply.jsx';
+import WhyChooseUs from './components/WhyChooseUs/WhyChooseUs.jsx';
 function App() {
   const url = "https://adamant-backend.onrender.com";
   return (

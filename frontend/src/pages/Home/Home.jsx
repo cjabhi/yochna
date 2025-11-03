@@ -9,6 +9,7 @@ import Reviews from '../../components/Reviews/Reviews';
 import OfficeLocations from '../../components/OfficeLocations/OfficeLocations';
 import ContactSection from '../../components/ContactSection/ContactSection';
 import Footer from '../../components/FooterSection/FooterSection';
+import WhyChooseUs from '../../components/WhyChooseUs/WhyChooseUs';
 
 const Home = ({url}) => {
   return (
@@ -59,6 +60,8 @@ const Home = ({url}) => {
         {/* <Reviews /> */}
 
         <OfficeLocations />
+
+        <WhyChooseUs />
 
         <ContactSection />
 

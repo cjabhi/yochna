@@ -43,9 +43,13 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Quick Links</h3>
             <ul>
-              <li>About Us</li>
+              <li onClick={()=>{navigate('/careers')}}>Careers</li>
               {/* <li>Industries</li> */}
-              <li>Why Choose Us</li>
+              <li onClick={() =>
+                document
+                  .getElementById("whychooseus")
+                  ?.scrollIntoView({ behavior: "smooth" })
+              } >Why Choose Us</li>
               {/* <li>Diversity & Inclusion</li> */}
               <li onClick={()=>{navigate('/contact')}}>Contact</li>
             </ul>
