@@ -43,7 +43,7 @@ const VacancyList = ({ url }) => {
   }
 
   return (
-    <div className="vacancy-list">
+    <div className="vacancy-list" id='vacancies'>
       <h2>Available Vacancies</h2>
       {vacancies.length === 0 ? (
         <p>No vacancies available at the moment.</p>

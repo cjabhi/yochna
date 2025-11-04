@@ -43,18 +43,32 @@ const Footer = () => {
           <div className="footer-column">
             <h3>Quick Links</h3>
             <ul>
-              <li onClick={()=>{navigate('/careers')}}>Careers</li>
+              <li onClick={()=>{
+                navigate('/careers');
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }, 300);
+              }}>Careers</li>
               {/* <li>Industries</li> */}
-              <li onClick={() =>
+              <li onClick={() =>{
+                navigate('/');
+                setTimeout(() => {
                 document
-                  .getElementById("whychooseus")
-                  ?.scrollIntoView({ behavior: "smooth" })
+                  .getElementById('whychooseus')
+                  ?.scrollIntoView({ behavior: 'smooth' });
+              }, 300);
+              }
               } >Why Choose Us</li>
               {/* <li>Diversity & Inclusion</li> */}
-              <li onClick={() =>
-                document
+              <li onClick={() =>{
+                navigate('/');
+                setTimeout(() => {
+                  document
                   .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })}>Contact</li>
+                  ?.scrollIntoView({ behavior: "smooth" })
+                }, 300);
+              }
+                }>Contact</li>
             </ul>
           </div>
 
