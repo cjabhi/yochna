@@ -86,7 +86,10 @@ const Navbar = () => {
         <div className="nav-buttons">
           <button className="support">Client Support</button>
           <a className="phone" href="tel:18882590537">+91 9650481240</a>
-          <Link to="/contact" className="contact">Contact Us</Link>
+          <Link onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })} className="contact">Contact Us</Link>
         </div>
 
         {/* Hamburger Icon */}
@@ -120,7 +123,14 @@ const Navbar = () => {
         <Link to="/business" onClick={toggleMenu}>For Business</Link>
         <Link to="/careers" onClick={toggleMenu}>Careers</Link>
         {/* <Link to="/blog" onClick={toggleMenu}>Blog</Link> */}
-        <Link to="/contact" onClick={toggleMenu}>Contact</Link>
+        <Link
+          onClick={() => {
+            toggleMenu();
+            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
+          }}
+        >
+          Contact
+        </Link>
       </div>
     </nav>
   );

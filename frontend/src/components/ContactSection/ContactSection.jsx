@@ -89,7 +89,7 @@ const ContactSection = () => {
   };
 
   return (
-    <div className="ContactSession">
+    <div className="ContactSession" id='contactsection'>
       <div className="hbar">
         <span>Contact Us</span>
         <h1>Partner with our industry expert for top talent</h1>
@@ -107,6 +107,8 @@ const ContactSection = () => {
           <div className="mb-8">
             <p className="call-us-title">Call us at:</p>
             <p className="phone-number">+91 9650481240</p>
+            <p className="call-us-title">Mail us at:</p>
+            <p className="phone-number">info@adamanthr.com</p>
           </div>
 
           <div>

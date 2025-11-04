@@ -7,7 +7,7 @@ const App = () => {
   return (
     <>
 
-      <div className="talent-page">
+      <div className="talent-page" id="contact">
         <div className="talent-container">
           <h1 className="talent-heading">We're here to help</h1>
           <p className="talent-subheading">
@@ -16,12 +16,12 @@ const App = () => {
 
           <div className="talent-box">
             <h2 className="talent-box-title">
-              Expand Your Business with Top Talent Partner with Yochana IT
+              Expand Your Business with Top Talent Partner with AdamantHr IT
               Solutions Inc.
             </h2>
             <p className="talent-text">
               Are you looking to grow your business and build a high-performing
-              team? At Yochana IT Solutions Inc., we specialize in talent
+              team? At AdamantHr IT Solutions Inc., we specialize in talent
               acquisition, workforce solutions, and strategic hiring to connect
               you with highly qualified professionals.
             </p>
@@ -73,7 +73,7 @@ const App = () => {
             </p>
           </div>
 
-          <div className="talent-contact-group">
+          {/* <div className="talent-contact-group">
             <div className="talent-contact-info">
               <p className="talent-contact-label">Call us at:</p>
               <p className="talent-contact-value">+91 9650481240</p>
@@ -82,52 +82,52 @@ const App = () => {
               <p className="talent-contact-label">Email us:</p>
               <p className="talent-contact-value">info@adamanthr.com</p>
             </div>
-          </div>
+          </div> */}
 
-          <div className="talent-btn-wrapper">
+          {/* <div className="talent-btn-wrapper">
 
             <button
-                onClick={() => {
+              onClick={() => {
                 document
-                .getElementById("form-container")
-                ?.scrollIntoView({ behavior: "smooth" });
-            }}
-             className="talent-btn" >Schedule a free consultation</button>
+                  .getElementById("form-container")
+                  ?.scrollIntoView({ behavior: "smooth" });
+              }}
+              className="talent-btn" >Schedule a free consultation</button>
 
-          </div>
+          </div> */}
         </div>
       </div>
-      
-      <div className="office-locations">
-  <h2>Our Offices</h2>
-  <div className="locations-wrapper">
-    <div className="location-card">
-      <h3>Delhi Office</h3>
-      <p>
-        A-127, 3rd Floor, Mayur Vihar, Phase-III,<br/>
-        Opp. Bank Of Baroda,<br/>
-        New Delhi – 110096
-      </p>
-    </div>
-    <div className="location-card">
-      <h3>Noida Office</h3>
-      <p>
-        B1, Building No 50, Block-C Sec-6,<br/>
-        Noida, Uttar Pradesh – 201301
-      </p>
-    </div>
-    <div className="location-card">
-      <h3>USA Office</h3>
-      <p>
-        1520 Preston Rd.<br/>
-        Plano, Texas – 75093
-      </p>
-    </div>
-  </div>
-</div>
+
+      {/* <div className="office-locations">
+        <h2>Our Offices</h2>
+        <div className="locations-wrapper">
+          <div className="location-card">
+            <h3>Delhi Office</h3>
+            <p>
+              A-127, 3rd Floor, Mayur Vihar, Phase-III,<br />
+              Opp. Bank Of Baroda,<br />
+              New Delhi – 110096
+            </p>
+          </div>
+          <div className="location-card">
+            <h3>Noida Office</h3>
+            <p>
+              B1, Building No 50, Block-C Sec-6,<br />
+              Noida, Uttar Pradesh – 201301
+            </p>
+          </div>
+          <div className="location-card">
+            <h3>USA Office</h3>
+            <p>
+              1520 Preston Rd.<br />
+              Plano, Texas – 75093
+            </p>
+          </div>
+        </div>
+      </div> */}
 
 
-      <ContactSection />
+      {/* <ContactSection /> */}
 
     </>
   );

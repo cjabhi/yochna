@@ -16,12 +16,13 @@ function App() {
       <Navbar />
       <Routes>
         <Route path='/' element = {<Home url={url} />} />
-        <Route path='/contact' element = {<Contact />} />
+        {/* <Route path='/contact' element = {<Contact />} /> */}
         <Route path='/services' element = {<Service url={url} />} />
         <Route path='/business' element = {<Business url={url} />} />
         <Route path='/careers' element = {<Careers url = {url} />} />
         <Route path='/careers/apply/:id' element = {<Apply url={url} />} />
       </Routes>
+      {/* <Contact /> */}
       <Footer />
     </div>
   );

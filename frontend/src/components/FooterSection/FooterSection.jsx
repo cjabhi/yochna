@@ -51,7 +51,10 @@ const Footer = () => {
                   ?.scrollIntoView({ behavior: "smooth" })
               } >Why Choose Us</li>
               {/* <li>Diversity & Inclusion</li> */}
-              <li onClick={()=>{navigate('/contact')}}>Contact</li>
+              <li onClick={() =>
+                document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })}>Contact</li>
             </ul>
           </div>
 

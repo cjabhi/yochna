@@ -9,7 +9,7 @@ const Service = ({url}) => {
         <div>
             <section className="wf-hero">
                 <div className="wf-content">
-                    <span className="wf-badge">SERVICES</span>
+                    {/* <span className="wf-badge">SERVICES</span> */}
                     <h1 className="wf-title">Workforce Solutions</h1>
                     <p className="wf-subtitle">
                         Elevate Your Business with Reliable and Efficient Technology-Driven
