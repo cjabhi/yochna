@@ -55,7 +55,8 @@
 .service-description {
   font-size: 0.95rem;
   line-height: 1.5;
-  color: #444;
+  color: #74706B;
+  text-align: justify;
 }
 
 .rpo-highlight {
