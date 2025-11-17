@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 import "./Navbar.css";
 
 const Navbar = () => {
+  const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
@@ -44,24 +46,24 @@ const Navbar = () => {
         <ul className="nav-links">
           <li><Link to="/">Home</Link></li>
           {/* <li className="dropdown"> */}
-            {/* <Link to="/company">Company ▾</Link> */}
-            {/* <div className="dropdown-menu-fullwidth"> */}
-              {/* <div className="dropdown-menu-inner"> */}
+          {/* <Link to="/company">Company ▾</Link> */}
+          {/* <div className="dropdown-menu-fullwidth"> */}
+          {/* <div className="dropdown-menu-inner"> */}
 
-                {/* Left Column */}
-                {/* <div className="dropdown-col">
+          {/* Left Column */}
+          {/* <div className="dropdown-col">
                   <h3>Streamlining Recruiting in an Overcoming Workforce Environment.</h3>
                 </div> */}
 
-                {/* Middle Column - vertical links */}
-                {/* <div className="dropdown-col">
+          {/* Middle Column - vertical links */}
+          {/* <div className="dropdown-col">
                   <Link to="/about">About Us</Link>
                   <Link to="/team">Why Us</Link>
                   {/* <Link to="/diverse">Diversity Equity & Inclusion</Link> */}
-                {/* </div>  */}
+          {/* </div>  */}
 
-                {/* Right Column */}
-                {/* <div className="dropdown-col" id="dropdown-col-right">
+          {/* Right Column */}
+          {/* <div className="dropdown-col" id="dropdown-col-right">
                   <ul>
                     <li><span className="icon">🏫</span> University and College Partnerships</li>
                     <li><span className="icon">🏢</span> Industry Associations</li>
@@ -72,8 +74,8 @@ const Navbar = () => {
                 </div> */}
 
 
-              {/* </div> */}
-            {/* </div> */}
+          {/* </div> */}
+          {/* </div> */}
           {/* </li> */}
           <li><Link to='/aboutus'>About Us</Link></li>
           <li><Link to="/services">Services</Link></li>
@@ -86,10 +88,21 @@ const Navbar = () => {
         <div className="nav-buttons">
           <button className="support">Client Support</button>
           <a className="phone" href="tel:18882590537">+91 9650481240</a>
-          <Link onClick={() =>
-                document
+          <li
+            onClick={() =>{
+                navigate('/');
+                setTimeout(() => {
+                  document
                   .getElementById("contact")
-                  ?.scrollIntoView({ behavior: "smooth" })} className="contact">Contact Us</Link>
+                  ?.scrollIntoView({ behavior: "smooth" })
+                }, 300);
+              }
+                }
+            className="contact"
+          >
+            Contact Us
+          </li>
+
         </div>
 
         {/* Hamburger Icon */}
@@ -124,10 +137,15 @@ const Navbar = () => {
         <Link to="/careers" onClick={toggleMenu}>Careers</Link>
         {/* <Link to="/blog" onClick={toggleMenu}>Blog</Link> */}
         <Link
-          onClick={() => {
-            toggleMenu();
-            document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
-          }}
+          onClick={() =>{
+                navigate('/');
+                setTimeout(() => {
+                  document
+                  .getElementById("contact")
+                  ?.scrollIntoView({ behavior: "smooth" })
+                }, 300);
+              }
+                }
         >
           Contact
         </Link>

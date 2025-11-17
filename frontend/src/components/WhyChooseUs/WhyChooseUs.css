@@ -53,7 +53,7 @@
 }
 
 .point-icon {
-  font-size: 30px;
+  font-size: 18px;
   color: #2563eb;
   flex-shrink: 0;
   margin-top: 3px;
@@ -72,6 +72,7 @@
 }
 
 /* Responsive Design */
+/* Responsive Design */
 @media (max-width: 800px) {
   .whychooseus-container {
     flex-direction: column;
@@ -83,16 +84,17 @@
   }
 
   .whychooseus-points {
-    align-items: center;
+    align-items: flex-start;   /* keep items left-aligned */
   }
 
   .point {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+    flex-direction: row !important;   /* force icon + text in same line */
+    align-items: center !important;
+    gap: 10px;
+    text-align: left !important;
   }
 
   .point-icon {
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 }

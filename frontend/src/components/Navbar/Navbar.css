@@ -224,6 +224,13 @@
   display: flex;
 }
 
+.mobilecontact {
+  text-decoration: none;
+  color: #333;
+  padding: 10px 0;
+  font-size: 1rem;
+}
+
 /* Responsive */
 @media (max-width: 900px) {
   .nav-links, .nav-buttons {

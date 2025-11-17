@@ -33,7 +33,7 @@ const Home = ({url}) => {
             <div className="chamber-stats">
                 <div className="stat">
                 <h3>10+ <span>Years</span></h3>
-                <p>assisting businesses in growth</p>
+                <p>Experience in helping businesses</p>
                 </div>
                 <div className="stat">
                 <h3>100 <span>%</span></h3>
@@ -44,8 +44,8 @@ const Home = ({url}) => {
                 <p>Candidates Placed</p>
                 </div>
                 <div className="stat">
-                <h3>24 <span>hr</span></h3>
-                <p>Average Answer Time</p>
+                <h3>20+</h3>
+                <p>States Connectivity in India</p>
                 </div>
             </div>
          </section>
