@@ -7,7 +7,7 @@ const slides = [
     id: 0,
     image: '/images/slide5.jpg',
     title: 'Simplifying Business',
-    subtitle: 'offering customized HR outsourcing solutions that let you focus on your business.',
+    subtitle: 'India’s Trusted Partner for Staffing, Compliance, Security, BGV & Integrated Workforce Solutions',
   },
   {
     id: 1,

@@ -194,5 +194,26 @@
 }
 
 
+/* ---- Download Button ---- */
+.download-btn {
+  display: inline-block;
+  background: #006AB0;              /* navy blue like your headings */
+  color: #ffffff;
+  padding: 0.9rem 2rem;
+  margin-top: 2rem;
+  border-radius: 100px;            /* fully rounded button */
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1rem;
+  box-shadow: 0 6px 12px rgba(30, 58, 138, 0.25);
+  transition: all 0.25s ease;
+}
+
+/* Hover Effect */
+.download-btn:hover {
+  background: #006Ac0;              /* brighter blue on hover */
+  /* transform: translateY(-2px); */
+  box-shadow: 0 8px 18px rgba(37, 99, 235, 0.35);
+}
 
 

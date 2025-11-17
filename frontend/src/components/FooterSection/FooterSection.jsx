@@ -69,6 +69,12 @@ const Footer = () => {
                 }, 300);
               }
                 }>Contact</li>
+                <li onClick={()=>{
+                navigate('/aboutus');
+                setTimeout(() => {
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                }, 300);
+              }}>About Us</li>
             </ul>
           </div>
 

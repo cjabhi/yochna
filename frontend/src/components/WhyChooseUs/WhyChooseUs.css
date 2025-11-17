@@ -37,13 +37,13 @@
   color: #555;
   line-height: 1.7;
   font-size: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 25px;
 }
 
 .whychooseus-points {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 10px;
 }
 
 .point {

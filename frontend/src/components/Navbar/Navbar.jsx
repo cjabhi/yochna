@@ -75,9 +75,9 @@ const Navbar = () => {
               {/* </div> */}
             {/* </div> */}
           {/* </li> */}
-
+          <li><Link to='/aboutus'>About Us</Link></li>
           <li><Link to="/services">Services</Link></li>
-          <li><Link to="/business">For Business</Link></li>
+          <li><Link to="/business">Clients</Link></li>
           <li><Link to="/careers">Careers</Link></li>
           {/* <li><Link to="/blog">Blog</Link></li> */}
         </ul>
@@ -120,7 +120,7 @@ const Navbar = () => {
           </Link>
         </details> */}
         <Link to="/services" onClick={toggleMenu}>Services</Link>
-        <Link to="/business" onClick={toggleMenu}>For Business</Link>
+        <Link to="/business" onClick={toggleMenu}>Clients</Link>
         <Link to="/careers" onClick={toggleMenu}>Careers</Link>
         {/* <Link to="/blog" onClick={toggleMenu}>Blog</Link> */}
         <Link

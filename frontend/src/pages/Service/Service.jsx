@@ -4,6 +4,7 @@ import ContactSection from '../../components/ContactSection/ContactSection';
 import Services from '../../components/Services/Services';
 import HowSupport from '../../components/HowSupport/HowSupport';
 import OurProcess from '../../components/SubComponents/OurProcess';
+import AllServices from '../../components/SubComponents/AllServices';
 const Service = ({url}) => {
     return (
         <div>
@@ -27,8 +28,7 @@ const Service = ({url}) => {
                 <div className="wf-pattern" aria-hidden="true"></div>
             </section>
             <Services url={url} />
-            <HowSupport />
-            <OurProcess />
+            <AllServices />
             <ContactSection />
         </div>
 

@@ -32,15 +32,15 @@ const Home = ({url}) => {
 
             <div className="chamber-stats">
                 <div className="stat">
-                <h3>15 <span>Years</span></h3>
+                <h3>10+ <span>Years</span></h3>
                 <p>assisting businesses in growth</p>
                 </div>
                 <div className="stat">
-                <h3>98 <span>%</span></h3>
-                <p>Client Satisfaction</p>
+                <h3>100 <span>%</span></h3>
+                <p>Statutory Compliance</p>
                 </div>
                 <div className="stat">
-                <h3>10K+</h3>
+                <h3>4.5K+</h3>
                 <p>Candidates Placed</p>
                 </div>
                 <div className="stat">

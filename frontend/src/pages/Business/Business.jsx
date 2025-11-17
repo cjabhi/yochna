@@ -9,6 +9,10 @@ const Business = ({url}) => {
     <div>
         <SmileFaces />
         <AllIndustries url={url} />
+        <div className='box-client'>
+          <h1 className='heading-client section-title'>Our Clients</h1>
+          <img src="images/client.png" alt="clients" style={{width:"100%"}} />
+        </div>
         <ContactSection />
     </div>
   )

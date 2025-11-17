@@ -4,34 +4,46 @@ import "./OurProcess.css";
 const steps = [
   {
     number: "1",
-    title: "Reach Out",
+    title: "Requirement gathering",
     description:
-      "We initiate contact, engage in conversations, and comprehend your needs.",
+      "Recieving the requirement from the Client.",
   },
   {
     number: "2",
-    title: "Connect",
+    title: "Matching Profiles",
     description:
-      "Building strong ties, ensuring culture and values alignment.",
+      "Sourcing matching candidates from our vast available database & head hunting & sending best suitable profile to the clients.",
   },
   {
     number: "3",
-    title: "Review",
+    title: "Coordination",
     description:
-      "Meticulous assessment, saving selection time.",
+      "Coordinating client & candidates for salary negotiation if candidate is selected or sourcing new candidates.",
   },
   {
     number: "4",
-    title: "Interview & Offer",
+    title: "Interview Scheduling",
     description:
-      "We facilitate interviews, aid in offer preparation, and presentation.",
+      "Scheduling interview as per client feedback & sourcing backup candidates for the same requirement.",
   },
   {
     number: "5",
+    title: "Interview & Offer",
+    description:
+      "Interview candidates over phone or face to face.",
+  },
+  {
+    number: "6",
     title: "Hire & Onboard",
     description:
-      "After offer acceptance, seamless hiring and onboarding support.",
+      "Follow up the candidates till joining and after.", 
   },
+  {
+    number: "7",
+    title: "Post Joining Support",
+    description:
+    "Post joining handling training, induction, payroll, mobile app etc.",
+  }
 ];
 
 const OurProcess = () => {

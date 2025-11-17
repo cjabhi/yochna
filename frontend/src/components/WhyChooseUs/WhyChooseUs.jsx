@@ -1,11 +1,12 @@
 import React from "react";
-import { FaCog, FaBriefcase, FaUsers } from "react-icons/fa";
+import { FaCheckCircle } from "react-icons/fa";
 import "./WhyChooseUs.css";
 
 const WhyChooseUs = () => {
   return (
     <section className="whychooseus" id="whychooseus">
       <div className="whychooseus-container">
+        
         {/* Left Image */}
         <div className="whychooseus-image">
           <img src="/images/whychooseus.png" alt="Working professional" />
@@ -22,36 +23,39 @@ const WhyChooseUs = () => {
             the parties can be equally benefitted.
           </p>
 
+          {/* Updated Points */}
           <div className="whychooseus-points">
+
             <div className="point">
-              <FaCog className="point-icon" />
-              <div>
-                <h3>Near real time and quality service.</h3>
-                <p>A dedicated team with industry specialization.</p>
-              </div>
+              <FaCheckCircle className="point-icon" />
+              <p>Zero-error documentation</p>
             </div>
 
             <div className="point">
-              <FaBriefcase className="point-icon" />
-              <div>
-                <h3>Business Consulting</h3>
-                <p>
-                  We provide customized service to our client to help them grow
-                  in their business.
-                </p>
-              </div>
+              <FaCheckCircle className="point-icon" />
+              <p>Verified manpower</p>
             </div>
 
             <div className="point">
-              <FaUsers className="point-icon" />
-              <div>
-                <h3>Temporary staffing</h3>
-                <p>
-                  Team of professional recruiters offer staffing services for
-                  temporary, temp, temp to hire, contract to hire.
-                </p>
-              </div>
+              <FaCheckCircle className="point-icon" />
+              <p>Fast replacement support</p>
             </div>
+
+            <div className="point">
+              <FaCheckCircle className="point-icon" />
+              <p>Transparent MIS reporting</p>
+            </div>
+
+            <div className="point">
+              <FaCheckCircle className="point-icon" />
+              <p>Multi-location delivery</p>
+            </div>
+
+            <div className="point">
+              <FaCheckCircle className="point-icon" />
+              <p>Dedicated key account manager</p>
+            </div>
+
           </div>
         </div>
       </div>

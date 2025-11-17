@@ -67,8 +67,7 @@ const [services , setServices] = useState ([]);
 
   return (
     <div className="services-section">
-      <h1 className="section-title">Services</h1>
-
+      <h1 className="section-title"> Services</h1>
       {/* Main Grid (6 services) */}
       <div className="services-grid">
         {services.map((service, index) => (
