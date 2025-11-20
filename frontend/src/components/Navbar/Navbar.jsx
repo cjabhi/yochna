@@ -136,9 +136,10 @@ const Navbar = () => {
         <Link to="/business" onClick={toggleMenu}>Clients</Link>
         <Link to="/careers" onClick={toggleMenu}>Careers</Link>
         {/* <Link to="/blog" onClick={toggleMenu}>Blog</Link> */}
-        <Link
+        <p className="mobilecontact"
           onClick={() =>{
                 navigate('/');
+                toggleMenu();
                 setTimeout(() => {
                   document
                   .getElementById("contact")
@@ -148,7 +149,7 @@ const Navbar = () => {
                 }
         >
           Contact
-        </Link>
+        </p>
       </div>
     </nav>
   );
