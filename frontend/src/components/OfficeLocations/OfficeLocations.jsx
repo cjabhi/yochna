@@ -14,7 +14,7 @@ const locations = [
   },
   {
     image: "images/newyork.jpg",
-    name: "New York , US",
+    name: "Texas , US",
     address: "1520 Preston Rd. Plano, Texas – 75093"
   },
   // {
