@@ -7,7 +7,7 @@ const Navbar = () => {
 
   return (
     <div className='navbar' >
-        <img className='logo' src='images/logo.png' alt="Adamant" />
+        <img className='logo' src='images/logo.png' alt="Adamant HR" />
         <div className='navbar-right'>
           <img className='profile' src='images/admin.png' alt="admin👨‍💼" />
           <button className='logout-btn' onClick={logout}>Logout</button>

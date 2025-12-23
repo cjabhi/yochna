@@ -16,12 +16,12 @@ const App = () => {
 
           <div className="talent-box">
             <h2 className="talent-box-title">
-              Expand Your Business with Top Talent Partner with Adamant Hr IT
+              Expand Your Business with Top Talent Partner with Adamant HR IT
               Solutions Inc.
             </h2>
             <p className="talent-text">
               Are you looking to grow your business and build a high-performing
-              team? At Adamant Hr IT Solutions Inc., we specialize in talent
+              team? At Adamant HR IT Solutions Inc., we specialize in talent
               acquisition, workforce solutions, and strategic hiring to connect
               you with highly qualified professionals.
             </p>
@@ -44,6 +44,8 @@ const App = () => {
                 "Pharmaceuticals",
                 "Education",
                 "E-commerce",
+                "ELV Industry",
+                "Telecom Industry",
               ].map((item, i) => (
                 <li className="talent-list-item" key={i}>
                   <svg

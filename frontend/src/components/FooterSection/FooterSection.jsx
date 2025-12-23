@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="footer-top simple">
           {/* Column 1 - About */}
           <div className="footer-column c1">
-            <h3>About Adamant</h3>
+            <h3>About Adamant HR</h3>
             <p>
               Adamant HR delivers innovative and scalable workforce solutions.
               We connect businesses with top talent across industries and help
@@ -130,7 +130,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom-row">
-          <p>© 2025 Adamant Hr</p>
+          <p>© 2025 Adamant HR</p>
           <div className="footer-links">
             <a href="/">Terms & Conditions</a>
             <a href="/">Privacy Policy</a>

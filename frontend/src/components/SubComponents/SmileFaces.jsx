@@ -114,7 +114,7 @@ const App = () => {
             We find the talent, so you can focus on your brilliance
           </h1>
           <p className="paragraph">
-            With Adamant Hr as your talent partner, you can shine brighter, innovate with confidence, and make a meaningful impact in your industry. Together, we'll create a future filled with success and endless possibilities. Contact Adamant Hr today and let your brilliance shine through. We find the talent, so you can focus on your brilliance.
+            With Adamant HR as your talent partner, you can shine brighter, innovate with confidence, and make a meaningful impact in your industry. Together, we'll create a future filled with success and endless possibilities. Contact Adamant HR today and let your brilliance shine through. We find the talent, so you can focus on your brilliance.
           </p>
           <a className="btn"
            onClick={() => {
