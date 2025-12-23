@@ -130,7 +130,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-bottom-row">
-          <p>© 2025 Adamant</p>
+          <p>© 2025 Adamant Hr</p>
           <div className="footer-links">
             <a href="/">Terms & Conditions</a>
             <a href="/">Privacy Policy</a>
