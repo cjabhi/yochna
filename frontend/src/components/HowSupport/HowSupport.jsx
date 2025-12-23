@@ -118,8 +118,8 @@ const App = () => {
     
         </div>
         <div className="text-section">
-          <h2 className="main-heading">How AdamantHr Supports You</h2>
-          <h3 className="list-heading">AdamantHr provides:</h3>
+          <h2 className="main-heading">How Adamant Hr Supports You</h2>
+          <h3 className="list-heading">Adamant Hr provides:</h3>
           <ul className="list-container">
             <li className="list-item">
               <span className="list-item-title">Expertise:</span>
@@ -155,7 +155,7 @@ const App = () => {
             </li>
           </ul>
           <p className="paragraph">
-            Choose AdamantHr as Your Talent Solutions Partner and experience the advantage of a dedicated team committed to your success. We're here to help you build the workforce that drives your business forward.
+            Choose Adamant Hr as Your Talent Solutions Partner and experience the advantage of a dedicated team committed to your success. We're here to help you build the workforce that drives your business forward.
           </p>
         </div>
       </div>

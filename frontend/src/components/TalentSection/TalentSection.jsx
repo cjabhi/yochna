@@ -8,7 +8,7 @@ const TalentSection = () => {
         <span className="tag">WHAT WE DO</span>
         <h1 className="title">
           Unlock Top Talent: Your Path to Premier Hiring Solutions, Based in
-          Michigan
+          Noida, India
         </h1>
       </div>
     </section>

@@ -16,12 +16,12 @@ const App = () => {
 
           <div className="talent-box">
             <h2 className="talent-box-title">
-              Expand Your Business with Top Talent Partner with AdamantHr IT
+              Expand Your Business with Top Talent Partner with Adamant Hr IT
               Solutions Inc.
             </h2>
             <p className="talent-text">
               Are you looking to grow your business and build a high-performing
-              team? At AdamantHr IT Solutions Inc., we specialize in talent
+              team? At Adamant Hr IT Solutions Inc., we specialize in talent
               acquisition, workforce solutions, and strategic hiring to connect
               you with highly qualified professionals.
             </p>

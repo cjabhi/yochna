@@ -165,7 +165,7 @@ const IndustriesPage = ({ url }) => {
       `}</style>
 
       <div className="yo-header">
-        <h1>AdamantHr – Your Trusted Partner for IT Talent</h1>
+        <h1>Adamant Hr – Your Trusted Partner for IT Talent</h1>
         <p>
           We connect companies with skilled professionals across industries.
           Click a card to expand its details.

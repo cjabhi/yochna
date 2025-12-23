@@ -86,7 +86,7 @@ const [services , setServices] = useState ([]);
           <div className="service-icon">🖥️</div>
           <h3 className="service-title">Recruitment Process Outsourcing (RPO)</h3>
           <p className="service-description">
-            Streamline your talent acquisition with AdamantHr's Recruitment Process Outsourcing (RPO) services.
+            Streamline your talent acquisition with Adamant Hr's Recruitment Process Outsourcing (RPO) services.
             Our RPO solutions provide a scalable and efficient approach to hiring, managing every stage of the process
             from initial sourcing to successful onboarding. Gain access to a wider talent pool, reduce recruitment costs,
             and improve hiring consistency with our expert RPO support.
