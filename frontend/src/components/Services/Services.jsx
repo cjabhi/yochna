@@ -95,7 +95,7 @@ const [services , setServices] = useState ([]);
 
         {/* Right CTA */}
         <div className="rpo-highlight">
-          <h2 style={{color:'white'}} >Optimize recruitment with Admant HR's tech-driven RPO.</h2>
+          <h2 style={{color:'white'}} >Optimize recruitment with Adamant HR's tech-driven RPO.</h2>
           <p style={{color:'white'}}>Efficient hiring, reduced costs, and expert talent solutions.</p>
           <a href="/contact" className="contact-link">Contact us</a>
         </div>
